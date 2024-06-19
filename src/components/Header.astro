@@ -28,7 +28,7 @@ const menuOptions: MenuOption[] = [
             </a>
             <div class="hidden lg:flex lg:gap-x-12">
                 {menuOptions.map((option) => (
-                    <a href={option.url} class="text-sm font-semibold leading-6 text-gray-900">{option.name}</a>
+                    <a href={option.url} class="text-sm font-semibold leading-6 text-gray-900 hover:underline">{option.name}</a>
                 ))}
             </div>
         </div>
@@ -41,7 +41,9 @@ const menuOptions: MenuOption[] = [
             </button>
         </div>
         <div class="hidden lg:flex">
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:underline">Log in </a>
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:underline">  ||  </a>
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:underline">Sing up </a>
         </div>
     </nav>
 
