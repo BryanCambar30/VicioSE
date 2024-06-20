@@ -1,0 +1,30 @@
+<!-- Botón "Top" -->
+<button id="topBtn" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-700">
+    ↑ Top
+  </button>
+
+  <!-- JavaScript para el botón "Top" -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Obtener el botón solo después de que el DOM esté completamente cargado
+      const topBtn = document.getElementById("topBtn");
+
+      // Verificar si el botón existe antes de intentar manipularlo
+      if (topBtn) {
+        // Mostrar el botón cuando el usuario se desplaza hacia abajo 100px desde la parte superior
+        window.onscroll = function() {
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            topBtn.style.display = "block";
+          } else {
+            topBtn.style.display = "none";
+          }
+        };
+
+        // Volver a la parte superior cuando el usuario hace clic en el botón
+        topBtn.addEventListener("click", function() {
+          document.body.scrollTop = 0; // Para Safari
+          document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
+        });
+      }
+    });
+  </script>
