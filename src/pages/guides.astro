@@ -1,5 +1,24 @@
 ---
-import Base from '../layouts/Base.astro'
-import Card from '../components/Card.astro'
+import GuideLy from '../layouts/GuideLayout.astro'
+import Guide from '../components/Guide.astro'
 
 ---
+
+<GuideLy title="Guides Page">
+    <section>
+        <div>
+            
+        </div>
+    </section>
+    <section1>
+        <div class="text-white text-center"><h2 class="text-2xl font-bold text-gradient">Principal Guides on the platform</h2></div>
+        <div class="flex flex-col lg:flex-row items-center text-white text-lg text-center lg:text-center space-y-4 lg:space-y-0 lg:space-x-4">
+            <Guide /><Guide /><Guide />
+        </div>
+    </section1>
+    <section2>
+        <div>
+
+        </div>
+    </section2>
+</GuideLy>
