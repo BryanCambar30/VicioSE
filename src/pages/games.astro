@@ -1,0 +1,75 @@
+import  from '../layouts/GuideLayout.astro'
+import Guide from '../components/Guide.astro'
+
+---
+
+<GuideLy title="Guides Page">
+    <section class="relative bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('/public/Images/Biblioteca'); height: 40vh;">
+        <div class="flex flex-col items-center justify-center p-4 md:p-8 w-full h-full">
+            <div class="max-w-xl mx-auto text-center">
+                <h1 class="text-indigo-950 font-bold text-2xl">Welcomes to the Guides</h1>
+                <p class="text-white instructions mt-4">Are you striving to unlock every achievement and earn the coveted platinum trophy in your favorite games? Look no further! 
+                    At Vicio, we provide comprehensive resources to help you master every game and secure that platinum trophy.
+                </p>
+            </div>
+        </div>
+    </section>    
+    <section1 class="lg:mt-10">
+        <div class="flex flex-col items center text-white text-xl font-bold text-center max-w-screen-md mx-auto lg:mb-6 lg:mt-6">Here in Vicio, where we prioritize the quality of the guides you follow. Our mission is to ensure that you have access to the best, most reliable, 
+            and most comprehensive resources available to help you achieve your gaming goals.
+        </div>
+        <div class="flex flex-col lg:flex-row items-center text-white text-lg text-center lg:text-center space-y-4 lg:space-y-0 lg:space-x-4">
+            <div class="lg:ml-8 flex flex-col items-center w-full lg:w-auto">
+              <h2 class="text-2xl font-bold text-gradient">The Most Famous Guide</h2>
+              <div class="max-w-screen-md mx-auto">
+                <p class="mt-2 text-center">Throughout our history, we have found that the following guide is the most searched for, the highest rated, and the most used and saved by our users.</p>
+                </div>
+            </div>
+            <div class="lg:ml-4 lg:mt-8">
+              <Guide />
+            </div>
+        </div>
+    </section1>
+    <div class="flex flex-col lg:flex-row items-center text-white text-lg text-center lg:text-center space-y-4 lg:space-y-0 lg:space-x-4">
+        <h1></h1>
+    </div>
+    <section2 class="lg:mb-10">
+        <div class="text-white text-center lg:mt-6 lg:mb-2"><h2 class="text-2xl font-bold text-gradient">Principal Guides on the platform</h2></div>
+        <div class="flex flex-col lg:flex-row items-center text-white text-lg text-center lg:text-center space-y-4 lg:mb-6 lg:ml-4 lg:mr-4 lg:space-y-0 lg:space-x-4">
+            <Guide /><Guide /><Guide />
+        </div>
+    </section1>
+    <section2>
+        <div>
+
+        </div>
+    </section2>
+</GuideLy>
+
+<style>
+    .instructions {
+        margin-bottom: 2rem;
+        border: 1px solid rgba(var(--accent-light), 25%);
+        background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+    .instructions code {
+        font-size: 0.8em;
+        font-weight: bold;
+        background: rgba(var(--accent-light), 12%);
+        color: rgb(var(--accent-light));
+        border-radius: 4px;
+        padding: 0.3em 0.4em;
+    }
+    .instructions strong {
+        color: rgb(var(--accent-light));
+    }
+    .text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+</style>
