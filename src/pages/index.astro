@@ -2,6 +2,28 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Base from '../layouts/Base.astro';
+import TopBtn from '../components/TopBtn.astro';
+import Guides from '../components/Guide.astro';
+import GuideBtn from '../components/GuideBtn.astro';
+import Games from '../components/Games.astro';
+import GamesBtn from '../components/GamesBtn.astro';
+
+const games = [
+  { 
+    image: '/assets/img/DarkSoul.jpg', 
+    title: 'Dark Souls Remaster', 
+    description: 'Dark Souls is a fantasy role-playing game, originally released in 2011 and remastered in 2018 by FromSoftware Inc. It is well renowned and infamous for being difficult and unforgiving in nature.' 
+  },
+  { 
+	title: 'Elden Ring', 
+	description: 'Is an action role-playing video game developed by FromSoftware and published by Bandai Namco Entertainment. The game is the result of a collaboration between director and designer Hidetaka Miyazaki and fantasy novelist George R. R. Martin', 
+	image: '/assets/img/EldenRIng.jpeg'
+},
+  { title: 'Sekiro', 
+  description: 'Sekiro: Shadows Die Twice is an action-adventure game...', 
+  image: '/assets/img/Sekiro.jpeg', 
+  },
+];
 ---
 
 <Base title="Welcome to Vicio.">
@@ -61,6 +83,15 @@ import Base from '../layouts/Base.astro';
 			<h2 class="text-2xl font-bold text-center text-white">Most Famous Guides</h2>
     		<p class="text-center"></p>
 		</h1>
+		<div class="mt-4 flex flex-col lg:flex-row items-center text-white text-lg text-center lg:text-center space-y-4 lg:space-y-0 lg:space-x-4">
+            <Guides /><Guides /><Guides />
+        </div>
+		<GuideBtn /></GuidesBtn>
+		<div class="text-white text-center text-bold text-lg"><h1 class="text-white text-center text-bold text-2xl font-bold">Favorite games</h1></div>
+		<div class="lg:mt-4 lg:ml-4 lg:mr-4 flex flex-col lg:flex-row items-center text-white text-lg text-center lg:text-center space-y-4 lg:space-y-0 lg:space-x-4">
+           {games.map((game) => <Games {...game} />) }
+        </div>
+		<GamesBtn />
 	</section2>
 </Base>
 

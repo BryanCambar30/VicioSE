@@ -13,6 +13,8 @@ export interface Props {
 
 const { title } = Astro.props;
 
+
+
 ---
 
 <!doctype html>
@@ -28,17 +30,8 @@ const { title } = Astro.props;
     <body>
         <Header title={title} />
         <slot />
-		<div class="mt-4 flex flex-col lg:flex-row items-center text-white text-lg text-center lg:text-center space-y-4 lg:space-y-0 lg:space-x-4">
-            <Guides /><Guides /><Guides />
-        </div>
-		<GuideBtn /></GuidesBtn>
-		<div class="text-white text-center text-bold text-lg"><h1 class="text-white text-center text-bold text-2xl font-bold">Favorite games</h1></div>
-		<div class="lg:mt-4 lg:ml-4 lg:mr-4 flex flex-col lg:flex-row items-center text-white text-lg text-center lg:text-center space-y-4 lg:space-y-0 lg:space-x-4">
-            <Games /><Games /><Games />
-        </div>
-		<GamesBtn />
 		<div class="mt-4"></div>
-        <Footer />
+		<Footer />
     </body>
 </html>
 
