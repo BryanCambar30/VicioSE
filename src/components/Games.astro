@@ -8,7 +8,7 @@ const { image, title, description } = Astro.props as GameProps;
 
 <a
   href="#"
-  class="h-30 relative block overflow-hidden rounded-lg border border-gray-100 p-4 sm:p-6 lg:p-8 mx-auto sm:w-1/2"
+  class="h-85 relative block overflow-hidden rounded-lg border border-gray-100 p-4 sm:p-6 lg:p-8 mx-auto sm:w-1/2"
 >
     <span
       class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"
@@ -20,11 +20,21 @@ const { image, title, description } = Astro.props as GameProps;
         class="aspect-square w-20 rounded-lg object-cover"
       />
     
-      <div class="">
+      <div class="flex flex-col justify-between">
         <h3 class="text-lg/tight font-medium text-white">{title}</h3>
-        <p class="mt-0.5 text-white text-base">
+        <p class="mt-0.5 text-white text-base line-clamp">
           {description}
         </p>
       </div>
     </div>
 </a>
+
+<style>
+  .line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* Número de líneas que deseas mostrar */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>
