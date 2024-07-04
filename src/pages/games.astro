@@ -19,6 +19,18 @@ const games = [
   description: 'Sekiro: Shadows Die Twice is an action-adventure video game developed by From Software and published by Activision.1The game was released on March 22, 2019 on the PlayStation 4, Xbox One, and Microsoft Windows platforms.2The game follows a shinobi from the Sengoku period, known as Lobo, who attempts revenge on a samurai clan that attacked and kidnapped his master.', 
   image: '/assets/img/Sekiro.jpeg', 
   },
+  { title: 'Lies of P', 
+  description: 'Lies of P is a soulslike video game developed by Round8 Studio and published by Neowiz Games, both South Korean companies. The game was released on September 19, 2023, for PlayStation 4, PlayStation 5, Windows, Xbox One, and Xbox Series X/S.1​2​3The game is loosely based on the 1883 Italian novel The Adventures of Pinocchio by writer Carlo Collodi.', 
+  image: '/assets/img/LiesOfP.jpeg', 
+  },
+  { title: "Baldur's gate III", 
+  description: "Baldur's Gate III is a role-playing video game developed by Larian Studios. It represents the third main installment in the Baldur's Gate series, based on the Dungeons & Dragons tabletop role-playing game system. On October 6, 2020, a preview version of the game was released in Early Access format for Windows, macOS, and the Stadia streaming service. The game was in Early Access until its official release on August 3, 2023; September 6 is the release date of the PlayStation 5 version. An Xbox Series X/S edition is currently in development. However, the Stadia version was canceled after the closure of that service.", 
+  image: '/assets/img/Baldurs.jpeg', 
+  },
+  { title: 'Stellar Blade', 
+  description: "Stellar Blade is an action-adventure video game developed by Shift Up and published by Sony Interactive Entertainment. The game's release was made for the PlayStation 5 console on April 26, 2024. The game received very positive reviews, highlighting its innovative gameplay, story, and graphics.", 
+  image: '/assets/img/stellarBlade.jpeg', 
+  },
 ];
 
 ---
@@ -44,6 +56,8 @@ const games = [
             stories and exciting challenges. This immersive experience not only entertains but also educates, inspires, and connects people from diverse cultures and 
             backgrounds. Thus, video games stand out as a dynamic form of artistic expression that can positively influence the lives of those who enjoy them."
         </div>
+    </section1>
+    <section2 class="lg:mt-10">
         <div class="flex flex-col lg:flex-row items-center justify-center text-white text-lg text-center lg:text-center space-y-4 lg:space-y-0 lg:space-x-4">
             <div class="flex flex-col items-center w-full lg:w-auto">
                 <h2 class="text-2xl font-bold text-gradient">The Most Famous Games at the moment</h2>
@@ -54,35 +68,33 @@ const games = [
             </div>
         </div>
         
-<div class="lg:mt-8">
-    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {games.map((game, index) => (
-          <li class="text-white font-bold text-2xl flex flex-col items-center">
-            <span class="mb-4">Top {index + 1}</span>
-            <div class="flex flex-col w-full bg-gray-800 p-4 rounded-lg">
-              <Game {...game} />
-            </div>
-          </li>
-        ))}
-      </ul>
-</div>
-
-    </div>
-    </section1>
+        <div class="lg:mt-8 w-full">
+            <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+                {games.map((game, index) => (
+                  <li class="text-white text-2xl flex flex-col items-center w-full">
+                    <span class="mb-4">Top {index + 1}</span>
+                    <div class="flex flex-col w-full bg-gray-800 p-4 rounded-lg items-center text-white text-lg text-center lg:text-center">
+                      <Game {...game} class="w-full"/>
+                    </div>
+                  </li>
+                ))}
+            </ul>
+        </div>
+    </section2>
     <div class="flex flex-col lg:flex-row items-center text-white text-lg text-center lg:text-center space-y-4 lg:space-y-0 lg:space-x-4">
         <h1></h1>
     </div>
-    <section2 class="lg:mb-10">
+    <section3 class="lg:mb-10">
         <div class="text-white text-center lg:mt-6 lg:mb-2"><h2 class="text-2xl font-bold text-gradient">Principal Guides on the platform</h2></div>
         <div class="flex flex-col lg:flex-row items-center text-white text-lg text-center lg:text-center space-y-4 lg:mb-6 lg:ml-4 lg:mr-4 lg:space-y-0 lg:space-x-4">
             <Guide /><Guide /><Guide />
         </div>
-    </section1>
-    <section2>
+    </section3>
+    <section4>
         <div>
 
         </div>
-    </section2>
+    </section4>
 </GuideLy>
 
 <style>
