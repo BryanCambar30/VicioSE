@@ -2,6 +2,24 @@
 import GamesLy from '../layouts/GamesLayout.astro';
 import Guide from '../components/Guide.astro';
 import Game from '../components/Games.astro';
+import Index from './index.astro';
+
+const games = [
+  { 
+    image: '/assets/img/DarkSoul.jpg', 
+    title: 'Dark Souls Remaster', 
+    description: 'Dark Souls is a fantasy role-playing game, originally released in 2011 and remastered in 2018 by FromSoftware Inc. It is well renowned and infamous for being difficult and unforgiving in nature.' 
+  },
+  { 
+	title: 'Elden Ring', 
+	description: 'Is an action role-playing video game developed by FromSoftware and published by Bandai Namco Entertainment. The game is the result of a collaboration between director and designer Hidetaka Miyazaki and fantasy novelist George R. R. Martin', 
+	image: '/assets/img/EldenRIng.jpeg'
+},
+  { title: 'Sekiro', 
+  description: 'Sekiro: Shadows Die Twice is an action-adventure video game developed by From Software and published by Activision.1The game was released on March 22, 2019 on the PlayStation 4, Xbox One, and Microsoft Windows platforms.2The game follows a shinobi from the Sengoku period, known as Lobo, who attempts revenge on a samurai clan that attacked and kidnapped his master.', 
+  image: '/assets/img/Sekiro.jpeg', 
+  },
+];
 
 ---
 
@@ -37,44 +55,16 @@ import Game from '../components/Games.astro';
         </div>
         
 <div class="lg:mt-8">
-    <ul class="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:h-50">
-        <li class="text-white font-bold text-2xl flex flex-col items-center">
-            <span class="mb-4">Top 1</span>
-            <div class="flex flex:col w-full bg-gray-800 p-4 rounded-lgs">
-                <Game />
+    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {games.map((game, index) => (
+          <li key={index} class="text-white font-bold text-2xl flex flex-col items-center">
+            <span class="mb-4">Top {index + 1}</span>
+            <div class="flex flex-col w-full bg-gray-800 p-4 rounded-lg">
+              <Game {...game} />
             </div>
-        </li>
-        <li class="text-white font-bold text-2xl flex flex-col items-center"> 
-            <span class="mb-4">Top 2</span>
-            <div class="felx flex:col w-full bg-gray-800 p-4 rounded-lg">
-                <Game />
-            </div>
-        </li>
-        <li class="text-white font-bold text-2xl flex flex-col items-center"> 
-            <span class="mb-4">Top 3</span>
-            <div class="flex flex:col w-full bg-gray-800 p-4 rounded-lg">
-                <Game />
-            </div>
-        </li>
-        <li class="text-white font-bold text-2xl flex flex-col items-center">
-            <span class="mb-4">Top 4</span>
-            <div class="felx flex:colw-full bg-gray-800 p-4 rounded-lg">
-                <Game />
-            </div>
-        </li>
-        <li class="text-white font-bold text-2xl flex flex-col items-center">
-            <span class="mb-4">Top 5</span>
-            <div class="flex flex:col w-full bg-gray-800 p-4 rounded-lg">
-                <Game />
-            </div>
-        </li>
-        <li class="text-white font-bold text-2xl flex flex-col items-center">
-            <span class="mb-4">Top 6</span>
-            <div class="flex flex:col w-full bg-gray-800 p-4 rounded-lg">
-                <Game />
-            </div>
-        </li>
-    </ul>
+          </li>
+        ))}
+      </ul>
 </div>
 
     </div>
