@@ -27,15 +27,17 @@ const games = [
 ---
 
 <Base title="Welcome to Vicio.">
-	<section class="relative bg-cover bg-center bg-no-repeat bg-fixed h-80vh" style="background-image: url('/assets/img/Cuarto.jpg'); weigth: 100vh; height: 40vh;">
-		<main class="flex flex-col items-center justify-center p-4 md:p-8 w-full">
+	<section class="relative bg-cover bg-center bg-no-repeat bg-fixed h-80vh min-h-50vh md:min-h-80vh sm:min-h-75vh" style="background-image: url('/assets/img/Cuarto.jpg'); weigth: 100vh; height: 40vh;">
+		<main class="flex flex-col items-center justify-center p-4 md:p-8 w-full h-full overflow-y-auto">
 			<h1>Welcome to <span class="text-gradient">VICIO</span></h1>
-			<p class="instructions text-center">
+			<p class="sm:p-4 md:p-4 instructions text-center">
 				<strong>Your Digital Game Journal</strong><br />
 				Record, Review & Share your gaming adventures. Discover how much time you dedicate to your favorite games and plan your next conquest
 			</p>
 		</main>
 	</section>
+
+	
 	<section1 class="w-full mx-auto my-4 p-4">
 		<div class="flex flex-col lg:flex-row justify-center space-x-4">
 			<a href="#" class="group relative block bg-black w-full max-w-md">
@@ -134,6 +136,9 @@ const games = [
 		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
 		padding: 1.5rem;
 		border-radius: 8px;
+		max-width: 100%;
+		max-height: 40%; /* Para asegurar que no se desborde */
+    	box-sizing: border-box;
 	}
 	.instructions code {
 		font-size: 0.8em;
